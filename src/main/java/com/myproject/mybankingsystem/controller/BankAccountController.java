@@ -17,7 +17,7 @@ import com.myproject.mybankingsystem.entity.BankAccount;
 import com.myproject.mybankingsystem.service.BankAccountService;
 
 @RestController
-@RequestMapping("/bank/account")
+@RequestMapping("/bank/auth/account")
 public class BankAccountController {
 
 	@Autowired
