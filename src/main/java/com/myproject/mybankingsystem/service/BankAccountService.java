@@ -31,6 +31,18 @@ public class BankAccountService {
 		BankAccount bankAccount = new BankAccount();
 		bankAccount.setAccountHolder(bankAccountDto.getAccountHolder());
 		bankAccount.setAccountNumber(generateAccountNumber());
+		
+		bankAccount.setDateOfBirth(bankAccountDto.getDateOfBirth());
+		bankAccount.setEmail(bankAccountDto.getEmail());
+		bankAccount.setGender(bankAccountDto.getGender());
+		bankAccount.setMaritalStatus(bankAccountDto.getMaritalStatus());
+		bankAccount.setMobileNumber(bankAccountDto.getMobileNumber());
+		bankAccount.setResidentialAddress(bankAccountDto.getResidentialAddress());
+		bankAccount.setOccupation(bankAccountDto.getOccupation());
+		bankAccount.setIdentificationProof(bankAccountDto.getIdentificationProof());
+		bankAccount.setMaritalStatus(bankAccountDto.getMaritalStatus());
+		bankAccount.setAnnualIncome(bankAccountDto.getAnnualIncome());
+		
 		bankAccount.setAccountType(bankAccountDto.getAccountType());
 		bankAccount.setBalance(bankAccountDto.getInitialBalance());
 		bankAccount.setClosed(false);
@@ -59,7 +71,7 @@ public class BankAccountService {
 				.orElseThrow(() -> new EntityNotFoundException("Account Not Found"+ accountNumber));
 	}
 	
-	
+
 	
 	
 	/**
@@ -80,7 +92,9 @@ public class BankAccountService {
 				}).collect(Collectors.toList());
 	}
 	
-	
+	public BankAccountDto getBalance(String balance) {
+		return null;
+	}
 	
 	
 	/**

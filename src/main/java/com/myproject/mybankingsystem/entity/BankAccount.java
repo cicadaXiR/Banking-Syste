@@ -1,6 +1,7 @@
 package com.myproject.mybankingsystem.entity;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -32,6 +33,17 @@ public class BankAccount {
 	@Column(unique = true, nullable = false)
 	private String accountNumber;
 	private String accountHolder;
+	private Date dateOfBirth;
+	private String gender;
+	private MaritalStatus maritalStatus;
+	private String residentialAddress;
+	private String mobileNumber;
+	private String email;
+	private IdentificationProof identificationProof;
+	private String occupation;
+	private String companyAddress;
+	private EmploymentStatus employmentStatus;
+	private BigDecimal annualIncome;
 	private BigDecimal balance;
 	private AccountType accountType;
 	private Boolean closed;

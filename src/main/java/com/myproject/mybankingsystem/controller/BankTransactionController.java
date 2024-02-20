@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.myproject.mybankingsystem.dto.AmountWithdrawalDto;
 import com.myproject.mybankingsystem.dto.TransactionsDto;
 import com.myproject.mybankingsystem.entity.BankAccount;
+import com.myproject.mybankingsystem.service.BankAccountService;
 import com.myproject.mybankingsystem.service.BankTransactionService;
 
 @RestController
@@ -26,6 +27,9 @@ public class BankTransactionController {
 
 	@Autowired
 	private BankTransactionService bankTransactionService;
+	
+	@Autowired
+	private BankAccountService bankAccountService;
 
 	/**
 	 * To deposit amount to the bank account.
@@ -79,6 +83,7 @@ public class BankTransactionController {
 		List<TransactionsDto> trasactionHistory = bankTransactionService.getTransactions(accountNumber);
 		return new ResponseEntity<>(trasactionHistory, HttpStatus.OK);
 	}
+	
 
 	/**
 	 * To fetch all transactions history.
